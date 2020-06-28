@@ -192,7 +192,7 @@ Number:Time Cube_RotationTime { channel="mihome:sensor_cube:<GwID>:<ID>:rotation
 Number Cube_Battery <battery> { channel="mihome:sensor_cube:<GwID>:<ID>:batteryLevel" }
 Switch Cube_BatteryLow <energy> { channel="mihome:sensor_cube:<GwID>:<ID>:lowBattery" }
 
-// Aqara Smart Motion Sensor - see "xiaomi.rules" for action triggers
+// Aqara Vibration Sensor - see "xiaomi.rules" for action triggers
 DateTime Vibration_LastAction "[%1$tY-%1$tm-%1$td  %1$tH:%1$tM]" <clock-on> { channel="mihome:sensor_vibration:<GwID>:<ID>:lastAction" }
 Number Vibration_TiltAngle { channel="mihome:sensor_vibration:<GwID>:<ID>:tiltAngle" }
 Number Vibration_CoordinateX { channel="mihome:sensor_vibration:<GwID>:<ID>:coordinateX" }
@@ -292,7 +292,7 @@ then
     }
 end
 
-rule "Aqara Smart Motion Sensor"
+rule "Aqara Vibration Sensor"
 when
     Channel 'mihome:sensor_vibration:<GwID>:<ID>:action' triggered
 then
